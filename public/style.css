@@ -30354,7 +30354,6 @@ video {
   background-color: #0006;
   z-index: 5;
   visibility: hidden;
-  /* transition: .3s; */
 }
 
 .card:hover .card-hover {
@@ -30386,6 +30385,8 @@ video {
   font-size: 12px;
   color: #777777;
 }
+
+/* SCREEN */
 
 @media screen and (max-width: 1024px) {
   .aside-state-item {

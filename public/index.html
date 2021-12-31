@@ -58,10 +58,10 @@
             <h2 class="text-gray_dark text-6xl font-bold font-montserrat md:text-4xl">Best is here</h2>
             <p class= "text-gray_dark text-xl font-montserrat font-medium mt-3">Real estate portal Costa Blanca</p>
             <form class="main-form flex items-end justify-between mt-10 md:mt-2 sm:flex-col">
-                <label class="relative  w-3/5 sm:w-full">
+                <div class="relative  w-3/5 sm:w-full">
                     <img src="../assets/img/png/search.png" alt="search.png" class="search_icon absolute left-4 top-2">
                     <input type="text" class="main-form__inp pl-16 pr-8 w-full h-12 rounded-3xl outline-none text-lg font-semibold font-montserrat text-gray_dark" placeholder="Ex: Alicante">
-                </label>
+                </div>
                 <button class="main-form__btn bg-red rounded-3xl w-1/3 h-12 text-lg font-bold text-white font-montserrat sm:w-full sm:mt-2">See catalog</button>
             </form>
         </div>
@@ -290,18 +290,30 @@
                 <a href="" class="border-b-4 border-gray_dark hover:text-yellow hover:border-red">advices</a></h2>
  
 
-        <form class="form py-12 relative mt-20 sm:px-4 sm:mt-6">
+        <form id="form" class="form py-12 relative mt-20 sm:px-4 sm:mt-6">
             <div class="bg-form absolute right-0 top-0 -z-1 bg-yellow rounded-3xl"></div>
                 <div class="form-item">
                     <div class="receive-form-sub flex justify-between mb-4 text-gray_dark font-medium text-xl md:flex-wrap">
-                        <input type="email" class="form__inp inp_email h-12 rounded-3xl outline-none px-4 text-gray_dark font-medium text-xl md:w-full md:mb-4" placeholder="E-mail" required>
-                        <input type="number" class="form__inp inp_num h-12 rounded-3xl outline-none px-4 text-gray_dark font-medium text-xl md:w-full " placeholder="Phone" required>
+                        <div class="relative inp_email">
+                            <input type="email" id="userEmail" class="form__inp w-full h-12 rounded-3xl outline-none px-4 text-gray_dark font-medium text-xl md:w-full md:mb-4" placeholder="E-mail">
+                            <small class="absolute left-1 -bottom-4 md:bottom-0 text-xs text-red font-normal font-montserrat"></small>
+                        </div>
+                        <div class="relative inp_num">
+                            <input type="number" id="userPhone" class="form__inp w-full  h-12 rounded-3xl outline-none px-4 text-gray_dark font-medium text-xl md:w-full " placeholder="Phone">
+                            <small class="absolute left-1 -bottom-4 text-xs text-red font-normal font-montserrat"></small>
+                        </div>
                     </div>
-                    <input type="text" class="form__inp inp_name h-12 w-full rounded-3xl outline-none mb-4 px-4 text-gray_dark font-medium text-xl" placeholder="Name, Surname" required>
-                    <textarea class="w-full h-24 rounded-3xl outline-none resize-none p-4 text-gray_dark font-medium text-xl" placeholder="Message" required></textarea>
+                    <div class="relative">
+                        <input type="text" id="userName" class="form__inp inp_name h-12 w-full rounded-3xl outline-none mb-4 px-4 text-gray_dark font-medium text-xl" placeholder="Name, Surname">
+                        <small class="absolute left-1 bottom-0 text-xs text-red font-normal font-montserrat"></small>
+                    </div>
+                    <div class="relative">
+                        <textarea id="message" class="w-full h-24 rounded-3xl outline-none resize-none p-4 text-gray_dark font-medium text-xl" placeholder="Message"></textarea>
+                        <small class="absolute left-1 -bottom-3 text-xs text-red font-normal font-montserrat"></small>
+                    </div>
                     <div class="flex mt-4 md:flex-wrap">
                         <p class="w-3/5 form__text font-normal md:w-full">By continuing you accept our terms & privacy policy. You can stop receiving emails at any time by unsubscribing at the bottom of each email.</p>
-                        <button type="submit" class="w-2/5 md:w-full h-12 rounded-3xl bg-red text-white font-medium text-xl ml-3 md:ml-0 md:mt-4">Send request</button>
+                        <button type="button" id="submitForm" class="w-2/5 md:w-full h-12 rounded-3xl bg-red text-white font-medium text-xl ml-3 md:ml-0 md:mt-4">Send request</button>
                     </div>
                 </div>
             <img src="../assets/img/png/girl.png" alt="" class="absolute bottom-0 right-10 xl:right-0 lg:w-98 lg:-right-9 md:-right-16 sm:hidden">

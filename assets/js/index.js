@@ -184,3 +184,92 @@ const carousel = new Carouel({
 ]
 });
 carousel.init();
+// End Carousel
+
+// Start Form
+let form = document.getElementById('form');
+let userName = document.getElementById('userName');
+let userPhone = document.getElementById('userPhone');
+let userEmail = document.getElementById('userEmail');
+let message = document.getElementById('message');
+let submitBtn = document.getElementById('submitForm')
+
+
+submitBtn.addEventListener('click', () => {
+  checkInputs()
+
+  let successName = userName.parentElement.children[1].classList;
+  let successEmail = userEmail.parentElement.children[1].classList;
+  let successPass = userPhone.parentElement.children[1].classList;
+  let successMessage = message.parentElement.children[1].classList;
+
+  if(successName == 'success' && successEmail == 'success' && successPass == 'success' && successMessage == 'success') {
+    submitBtn.type = 'submit'
+  }
+});
+
+function checkInputs() {
+  const userNameValue = userName.value.trim();
+  const userEmailValue = userEmail.value.trim();
+  const userPhoneValue = userPhone.value.trim();
+  const messageValue = message.value.trim();
+
+
+  if(userNameValue === '' || userNameValue.length <= 2) {
+    setErrorFor(userName, "Введите ваше имя")
+  } else {
+    setSuccesFor(userName)
+    userName.parentElement.children[1].classList.add('success')
+  }
+
+  if(userEmailValue === '') {
+    setErrorFor(userEmail, "Введите ваш электронной почты")
+  }
+  else if(!isEmail(userEmailValue)) {
+    setErrorFor(userEmail, 'Некорректный эл. почта')
+  }
+  else {
+    setSuccesFor(userEmail)
+    userEmail.parentElement.children[1].classList.add('success')
+  }
+
+  if(userPhoneValue === '' || userPhoneValue.length < 4) {
+    setErrorFor(userPhone, "Введите ваше номер")
+  } else {
+    setSuccesFor(userPhone)
+    userPhone.parentElement.children[1].classList.add('success')
+  }
+  
+  if(messageValue === '') {
+    setErrorFor(message, "Оставьте свой отзыв")
+  }
+  else if(messageValue.length < 20) {
+    setErrorFor(message, "введите не менее 20 символов")
+  }
+  else {
+    setSuccesFor(message)
+    message.parentElement.children[1].classList.add('success')
+  }
+}
+
+function setErrorFor(input, message) {
+let small = input.parentElement.children[1]
+
+    input.classList.add('inputError');
+
+    small.innerText = message
+}
+
+function setSuccesFor(input) {
+let small = input.parentElement.children[1]
+    input.classList.remove('inputError');
+    input.classList.add('inputSucces');
+
+    small.innerText = ''
+
+} 
+
+function isEmail(email) {
+  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+}
+// End Form
