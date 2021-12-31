@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preload" href="../assets/fonts/Montserrat/Montserrat-Regular.ttf" as="font" crossorigin="anonymous">
+    <link rel="preload" href="../assets/fonts/Montserrat/Montserrat-Medium.ttf" as="font" crossorigin="anonymous">
+    <link rel="preload" href="../assets/fonts/Montserrat/Montserrat-SemiBold.ttf.ttf" as="font" crossorigin="anonymous">
+    <link rel="preload" href="../assets/fonts/Montserrat/Montserrat-Bold.ttf" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
+</head>
+
+<body>
+    <header class="pt-3 pb-3 bg-white font-montserrat">
+        <div class="container flex items-center justify-between">
+            <ul class="header-item flex items-center justify-between gray_dark w-3/5 md:w-5/6 sm:hidden">
+                <li><a href="" class="flex items-center text-gray_dark font-montserrat font-bold text-lg">
+                    <img src="../assets/img/png/logo.png" alt="logo.png" class="header__logo mr-2">
+                    <span class="md:w-20 leading-6">First Estate</span>
+                </a></li>
+                <li class="header-item__list"><a href="" class="header-item__link text-gray_dark font-montserrat font-bold text-lg">Buy</a></li>
+                <li class="header-item__list"><a href="" class="header-item__link text-gray_dark font-montserrat font-bold text-lg">Sell</a></li>
+                <li class="header-item__list"><a href="" class="header-item__link text-gray_dark font-montserrat font-bold text-lg">Build</a></li>
+                <li class="header-item__list"><a href="" class="header-item__link text-gray_dark font-montserrat font-bold text-lg">Reform</a></li>
+                <li class="header-item__list"><a href="" class="header-item__link text-gray_dark font-montserrat font-bold text-lg">Information & Guide</a></li>
+            </ul>
+
+            <div class="language cursor-pointer relative rounded-lg z-10 py-2 px-4 sm:hidden">
+                <div class="language-btn flex items-center cursor-pointer">
+                    <img src="../assets/img/png/global.png" alt="global.png" class="global mr-2">
+                    <span class="text-gray_dark font-montserrat font-bold lg:hidden text-lg">Language</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-header w-full items-center justify-between px-6 hidden sm:flex">
+            <a href="" class="flex items-center text-gray_dark font-montserrat font-bold">
+                <img src="../assets/img/png/logo.png" alt="logo.png" class="header__logo mr-2">
+                <span class="">First Estate</span>
+            </a>
+            <div class="burger w-10 h-6 flex justify-between flex-col">
+                <span class="block w-10 h-1 bg-gray_dark transition-transform"></span>
+                <span class="block w-10 h-1 bg-gray_dark"></span>
+                <span class="block w-10 h-1 bg-gray_dark transition-transform"></span>
+            </div>
+        </div>
+
+    </header>
+    <!-- End header -->
+
+    <main class="relative flex items-center md:flex-col md:items-end h-screen lg:h-100 md:h-auto font-montserrat">
+        <img src="../assets/img/png/main.jpg" class="w-full h-full absolute top-0 left-0 z-0 object-cover md:relative md:h-72" alt="">
+        <div class="main-item relative p-5 md:p-3 z-10 w-1/2 bg-yellow h-auto lg:w-5/6 md:w-full rounded-tr-2xl rounded-br-2xl md:rounded-none">
+            <h2 class="text-gray_dark text-6xl font-bold font-montserrat md:text-4xl">Best is here</h2>
+            <p class= "text-gray_dark text-xl font-montserrat font-medium mt-3">Real estate portal Costa Blanca</p>
+            <form class="main-form flex items-end justify-between mt-10 md:mt-2 sm:flex-col">
+                <label class="relative  w-3/5 sm:w-full">
+                    <img src="../assets/img/png/search.png" alt="search.png" class="search_icon absolute left-4 top-2">
+                    <input type="text" class="main-form__inp pl-16 pr-8 w-full h-12 rounded-3xl outline-none text-lg font-semibold font-montserrat text-gray_dark" placeholder="Ex: Alicante">
+                </label>
+                <button class="main-form__btn bg-red rounded-3xl w-1/3 h-12 text-lg font-bold text-white font-montserrat sm:w-full sm:mt-2">See catalog</button>
+            </form>
+        </div>
+
+        
+    <div class="language-bg w-full h-full items-center justify-center absolute left-0 top-0 bg-black_light z-50">
+        <div class="language-bg-item bg-gray_light rounded-lg w-auto py-2">
+            <div class="language-btn flex items-center cursor-pointer mb-8 px-8">
+                <img src="../assets/img/png/global.png" alt="global.png" class="global mr-7">
+                <span class="language-btn__text text-xl text-gray_dark font-montserrat font-bold">Language</span>
+            </div>
+            <ul>
+                <li class="px-8 hover:opacity-75 mb-4"><a href="" class="flex text-xl text-gray_dark font-montserrat font-bold"><img src="../assets/img/png/flag_EN.jpg" alt="flag.png" class="flag mr-4">English</a></li>
+                <li class="px-8 hover:opacity-75 mb-4"><a href="" class="flex text-xl text-gray_dark font-montserrat font-bold"><img src="../assets/img/png/flag_SP.jpg" alt="flag.png" class="flag mr-4">Spanish</a></li>
+                <li class="px-8 hover:opacity-75 mb-4"><a href="" class="flex text-xl text-gray_dark font-montserrat font-bold"><img src="../assets/img/png/flag_RU.jpg" alt="flag.png" class="flag mr-4">Russian</a></li>
+                <li class="px-8 hover:opacity-75 mb-4"><a href="" class="flex text-xl text-gray_dark font-montserrat font-bold"><img src="../assets/img/png/flag_FR.jpg" alt="flag.png" class="flag mr-4">French</a></li>
+                <li class="px-8 hover:opacity-75 mb-4"><a href="" class="flex text-xl text-gray_dark font-montserrat font-bold"><img src="../assets/img/png/flag_GR.jpg" alt="flag.png" class="flag mr-4">German</a></li>
+                <li class="px-8 hover:opacity-75 mb-4"><a href="" class="flex text-xl text-gray_dark font-montserrat font-bold"><img src="../assets/img/png/flag_Ity.jpg" alt="flag.png" class="flag mr-4">Italian</a></li>
+                <li class="px-8 hover:opacity-75 mb-4"><a href="" class="flex text-xl text-gray_dark font-montserrat font-bold"><img src="../assets/img/png/flag_Dutch.jpg" alt="flag.png" class="flag mr-4">Dutch</a></li>
+                <li class="px-8 hover:opacity-75 mb-4"><a href="" class="flex text-xl text-gray_dark font-montserrat font-bold"><img src="../assets/img/png/flag_SW.jpg" alt="flag.png" class="flag mr-4">Swedish</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="mobile-header-item w-full h-auto absolute top-0 left-0 bg-white z-50 p-8">
+        <div class="mobile-header-menu">
+            <div class="flex items-center font-montserrat font-bold text-3xl text-gray_dark">
+                <div class="w-10 h-6 flex justify-between flex-col mr-6">
+                    <span class="block w-10 h-1 bg-gray_dark"></span>
+                    <span class="block w-10 h-1 bg-gray_dark"></span>
+                    <span class="block w-10 h-1 bg-gray_dark"></span>
+                </div>
+                MENU
+            </div>
+            <ul>
+                <li class="mt-6 ml-16"><a href="" class="text-3xl font-normal font-montserrat text-gray_dark">Buy</a></li>
+                <li class="mt-6 ml-16"><a href="" class="text-3xl font-normal font-montserrat text-gray_dark">Sell</a></li>
+                <li class="mt-6 ml-16"><a href="" class="text-3xl font-normal font-montserrat text-gray_dark">Build</a></li>
+                <li class="mt-6 ml-16"><a href="" class="text-3xl font-normal font-montserrat text-gray_dark">Reform</a></li>
+                <li class="mt-6 ml-16"><a href="" class="text-3xl font-normal font-montserrat text-gray_dark">Information <br> & Guide</a></li>
+            </ul>
+        </div>
+
+        <div class="mobile-header-language mt-10">
+            <div class="flex items-center font-montserrat font-bold text-3xl text-gray_dark mb-10">
+                <img src="../assets/img/png/global.png" alt="global.png" class="mr-6 w-10">
+                Language
+            </div>
+            <ul class="hidden">
+                <li class="mt-6"><a href="" class="flex items-center text-3xl text-gray_dark font-montserrat font-normal"><img src="../assets/img/png/flag_EN.jpg" alt="flag.png" class="flag mr-7 w-10 h-6">English</a></li>
+                <li class="mt-6"><a href="" class="flex items-center text-3xl text-gray_dark font-montserrat font-normal"><img src="../assets/img/png/flag_SP.jpg" alt="flag.png" class="flag mr-7 w-10 h-6">Spanish</a></li>
+                <li class="mt-6"><a href="" class="flex items-center text-3xl text-gray_dark font-montserrat font-normal"><img src="../assets/img/png/flag_RU.jpg" alt="flag.png" class="flag mr-7 w-10 h-6">Russian</a></li>
+                <li class="mt-6"><a href="" class="flex items-center text-3xl text-gray_dark font-montserrat font-normal"><img src="../assets/img/png/flag_FR.jpg" alt="flag.png" class="flag mr-7 w-10 h-6">French</a></li>
+                <li class="mt-6"><a href="" class="flex items-center text-3xl text-gray_dark font-montserrat font-normal"><img src="../assets/img/png/flag_GR.jpg" alt="flag.png" class="flag mr-7 w-10 h-6" >German</a></li>
+                <li class="mt-6"><a href="" class="flex items-center text-3xl text-gray_dark font-montserrat font-normal"><img src="../assets/img/png/flag_Ity.jpg" alt="flag.png" class="flag mr-7 w-10 h-6">Italian</a></li>
+                <li class="mt-6"><a href="" class="flex items-center text-3xl text-gray_dark font-montserrat font-normal"><img src="../assets/img/png/flag_Dutch.jpg" alt="flag.png" class="flag mr-7 w-10 h-6">Dutch</a></li>
+                <li class="mt-6"><a href="" class="flex items-center text-3xl text-gray_dark font-montserrat font-normal"><img src="../assets/img/png/flag_SW.jpg" alt="flag.png" class="flag mr-7 w-10 h-6">Swedish</a></li>
+            </ul>
+        </div>
+    </div>
+    </main>
+    <!-- End main -->
+
+    <aside class="mt-20">
+        <div class="container md:pl-3">
+            <div class="aside-state">
+                <h2 class="text-5xl sm:text-3xl font-semibold font-montserrat text-gray_dark">Costa Blanca South</h2>
+                <div class="mt-8 flex justify-between sm:flex-col">
+                    <div class="aside-state-img relative">
+                        <img src="../assets/img/png/south.png" class="absolute top-0 left-0 object-cover w-full h-full rounded-3xl" alt="c_blanca.ng"> 
+                    </div>
+                    <div class="aside-state-item flex justify-between md:flex-wrap">
+                        <ul class="flex flex-col justify-between">
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">Alicante</a></li>
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">Torrevieja</a></li>
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">Santa Pola</a></li>
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">Campoamor</a></li>
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">La Mata</a></li>
+                        </ul>
+                                
+                        <ul class="flex flex-col justify-between">
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">Guardamar</a></li>
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">Gran Alacant</a></li>
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">Torremendo</a></li>
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">Santiago de la Ribera</a></li>
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">Orihuela</a></li>
+                        </ul>
+                        <ul class="flex flex-col justify-between">
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">Elche</a></li>
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">Aguilas</a></li>
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">San Javier</a></li>
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">Sagra</a></li>
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">San Pedro del Pinatar</a></li>
+                        </ul>
+                                
+                        <ul class="flex flex-col justify-between">
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">San Miguel de Salinas</a></li>
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">Formentera del Segura</a></li>
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">Torre de la Horadada</a></li>
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">Arenales del Sol</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="aside-state mt-14">
+                <h2 class="text-5xl sm:text-3xl font-semibold font-montserrat text-gray_dark">Costa Blanca North</h2>
+                <div class="mt-8 flex justify-between sm:flex-col">
+                    <div class="aside-state-img relative">
+                        <img src="../assets/img/png/north.jpg" class="absolute top-0 left-0 object-cover w-full h-full rounded-3xl" alt="c_blanca.ng"> 
+                    </div>
+                    <div class="aside-state-item flex justify-between md:flex-wrap">
+                        <ul class="flex flex-col justify-between">
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">Alicante</a></li>
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">Torrevieja</a></li>
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">Santa Pola</a></li>
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">Campoamor</a></li>
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">La Mata</a></li>
+                        </ul>
+                                
+                        <ul class="flex flex-col justify-between">
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">Guardamar</a></li>
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">Gran Alacant</a></li>
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">Torremendo</a></li>
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">Santiago de la Ribera</a></li>
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">Orihuela</a></li>
+                        </ul>
+                        <ul class="flex flex-col justify-between">
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">Elche</a></li>
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">Aguilas</a></li>
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">San Javier</a></li>
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">Sagra</a></li>
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">San Pedro del Pinatar</a></li>
+                        </ul>
+                                
+                        <ul class="flex flex-col justify-between">
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">San Miguel de Salinas</a></li>
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">Formentera del Segura</a></li>
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">Torre de la Horadada</a></li>
+                                    <li class="text-gray_dark text-xl lg:text-md font-bold"><a href="">Arenales del Sol</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!-- End aside -->
+
+    <section id="carousel" class="carousel my-28 font-montserrat overflow-hidden">
+        <div class="container relative pb-20">
+            <div class="carousel-bg h-full bg-yellow absolute rounded-3xl -z-1"></div>
+            <h2 class="text-6xl lg:text-5xl md:text-4xl sm:text-3xl lg:ml-3 text-gray_dark font-semibold pt-14">Our exclusive projects</h2>
+            <p class="text-gray_dark text-2xl lg:text-xl sm:text-lg lg:ml-3 font-medium mt-4 pb-10">We you imagine we create </p>
+
+            <div class="carousel-wrapper relative">
+                
+                <button class="prev absolute left-0 z-10 bg-white rounded-full flex items-center justify-center rotate-45"><img src="../assets/img/png/next.png" alt="" class=""></button>
+                <button class="next absolute right-2 z-10 bg-white rounded-full flex items-center justify-center"><img src="../assets/img/png/next.png" alt="" class=""></button>
+                <div class="carousel-item w-full">
+                    <div class="carousel-list">
+                       <div class="relative card overflow-hidden">
+                        <img src="../assets/img/png/card1.jpg" alt="" class="absolute top-0 left-0 w-full h-full object-cover rounded-3xl">  
+                            <div class="card-hover absolute top-0 left-0 w-full h-full rounded-3xl">
+                                <a href="" class="card-info absolute z-10 text-white font-montserrat">
+                                    <h3 class=" text-2xl font-bold">Villa Blanca</h3>
+                                    <p class="text-lg font-medium">read more...</p>
+                                </a>
+                            </div>
+                       </div>
+                    </div>
+                    <div class="carousel-list">
+                       <div class="relative card">
+                        <img src="../assets/img/png/card2.jpg" alt="" class="absolute top-0 left-0 w-full h-full object-cover  rounded-3xl">  
+                            <div class="card-hover absolute top-0 left-0 w-full h-full rounded-3xl">
+                                <a href="" class="card-info absolute z-10 text-white font-montserrat">
+                                    <h3 class=" text-2xl font-bold">Villa Blanca</h3>
+                                    <p class="text-lg font-medium">read more...</p>
+                                </a>
+                            </div>
+                       </div>
+                    </div>
+                    <div class="carousel-list">
+                       <div class="relative card">
+                        <img src="../assets/img/png/card3.jpg" alt="" class="absolute top-0 left-0 w-full h-full object-cover  rounded-3xl">  
+                            <div class="card-hover absolute top-0 left-0 w-full h-full rounded-3xl">
+                                <a href="" class="card-info absolute z-10 text-white font-montserrat">
+                                    <h3 class=" text-2xl font-bold">Villa Blanca</h3>
+                                    <p class="text-lg font-medium">read more...</p>
+                                </a>
+                            </div>
+                       </div>
+                    </div>
+                    <div class="carousel-list p-2">
+                       <div class="relative card">
+                        <img src="../assets/img/png/card2.jpg" alt="" class="absolute top-0 left-0 w-full h-full object-cover  rounded-3xl">  
+                            <div class="card-hover absolute top-0 left-0 w-full h-full rounded-3xl">
+                                <a href="" class="card-info absolute z-10 text-white font-montserrat">
+                                    <h3 class=" text-2xl font-bold">Villa Blanca</h3>
+                                    <p class="text-lg font-medium">read more...</p>
+                                </a>
+                            </div>
+                       </div>
+                    </div>
+                    <div class="carousel-list p-2">
+                       <div class="relative card">
+                        <img src="../assets/img/png/card1.jpg" alt="" class="absolute top-0 left-0 w-full h-full object-cover  rounded-3xl">  
+                            <div class="card-hover absolute top-0 left-0 w-full h-full rounded-3xl">
+                                <a href="" class="card-info absolute z-10 text-white font-montserrat">
+                                    <h3 class=" text-2xl font-bold">Villa Blanca</h3>
+                                    <p class="text-lg font-medium">read more...</p>
+                                </a>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End  carousel-->
+
+    <section class="receive mt-60 mb-28 sm:mb-5 lg:overflow-x-hidden sm:mt-20">
+        <div class="container mb-14 md:pl-3">
+            <h2 class="receive__title text-gray_dark text-6xl xl:text-5xl font-semibold font-montserrat relative z-30 sm:text-3xl sm:font-medium sm:px-4">Receive useful 
+                <a href="" class="border-b-4 border-gray_dark hover:text-yellow hover:border-red">information</a> and 
+                <a href="" class="border-b-4 border-gray_dark hover:text-yellow hover:border-red">advices</a></h2>
+ 
+
+        <form class="form py-12 relative mt-20 sm:px-4 sm:mt-6">
+            <div class="bg-form absolute right-0 top-0 -z-1 bg-yellow rounded-3xl"></div>
+                <div class="form-item">
+                    <div class="receive-form-sub flex justify-between mb-4 text-gray_dark font-medium text-xl md:flex-wrap">
+                        <input type="email" class="form__inp inp_email h-12 rounded-3xl outline-none px-4 text-gray_dark font-medium text-xl md:w-full md:mb-4" placeholder="E-mail" required>
+                        <input type="number" class="form__inp inp_num h-12 rounded-3xl outline-none px-4 text-gray_dark font-medium text-xl md:w-full " placeholder="Phone" required>
+                    </div>
+                    <input type="text" class="form__inp inp_name h-12 w-full rounded-3xl outline-none mb-4 px-4 text-gray_dark font-medium text-xl" placeholder="Name, Surname" required>
+                    <textarea class="w-full h-24 rounded-3xl outline-none resize-none p-4 text-gray_dark font-medium text-xl" placeholder="Message" required></textarea>
+                    <div class="flex mt-4 md:flex-wrap">
+                        <p class="w-3/5 form__text font-normal md:w-full">By continuing you accept our terms & privacy policy. You can stop receiving emails at any time by unsubscribing at the bottom of each email.</p>
+                        <button type="submit" class="w-2/5 md:w-full h-12 rounded-3xl bg-red text-white font-medium text-xl ml-3 md:ml-0 md:mt-4">Send request</button>
+                    </div>
+                </div>
+            <img src="../assets/img/png/girl.png" alt="" class="absolute bottom-0 right-10 xl:right-0 lg:w-98 lg:-right-9 md:-right-16 sm:hidden">
+        </form>
+    </div>
+    </section>
+    <!-- End receive -->
+
+    <footer class="footer py-10 bg-gray_dark">
+        <div class="container md:px-3">
+            <div class="flex justify-between mb-10">
+                <div class="">
+                    <a href="">
+                        <img src="../assets/img/png/footer-logo.png" alt="">
+                    </a>
+                    <div class="flex mt-6 sm:mt-24">
+                        <a href="">
+                            <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:bg-yellow"">
+                                <img src="../assets/img/png/facebook'.png" alt="">
+                            </div>
+                        </a>
+                        <a href="" class="mx-2">
+                            <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:bg-yellow">
+                                <img src="../assets/img/png/instagram.png" alt="">
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:bg-yellow">
+                                <img src="../assets/img/png/in.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap lg:ml-10 sm:ml-5">
+                <div class="w-56 sm:w-auto">
+                    <h4 class="text-xl text-white font-bold font-montserrat mb-4">See catalog</h4>
+                    <a href="" class="text-base text-white font-montserrat font-normal border-b-2 border-gray_dark hover:text-yellow hover:border-red">New build only</a> <br> <br>
+                    <a href="" class="text-base text-white font-montserrat font-normal border-b-2 border-gray_dark hover:text-yellow hover:border-red">Resale only</a>
+                </div>
+                <div class="w-56 sm:w-auto">
+                    <h4 class="text-xl text-white font-bold font-montserrat mb-4">Blog</h4>
+                    <a href="" class="text-base text-white font-montserrat font-normal border-b-2 border-gray_dark hover:text-yellow hover:border-red">Information & Guide</a> <br> <br>
+                    <a href="" class="text-base text-white font-montserrat font-normal border-b-2 border-gray_dark hover:text-yellow hover:border-red">Guide in Costa Blanca</a>
+                </div>
+                <div class="w-56 sm:w-auto">
+                    <h4 class="text-xl text-white font-bold font-montserrat mb-4">First Estate</h4>
+                    <a href="" class="text-base text-white font-montserrat font-normal border-b-2 border-gray_dark hover:text-yellow hover:border-red">About Us</a> <br> <br>
+                    <a href="" class="text-base text-white font-montserrat font-normal border-b-2 border-gray_dark hover:text-yellow hover:border-red">Contact Us</a>
+                </div>
+                <div class="w-56 sm:w-auto">
+                    <h4 class="text-xl text-white font-bold font-montserrat mb-4">To sell</h4>
+                    <a href="" class="text-base text-white font-montserrat font-normal border-b-2 border-gray_dark hover:text-yellow hover:border-red">Sell ​​your property quickly and profitably</a>
+                </div>
+                </div>
+            </div>
+            <h4 class="text-white text-base font-montserrat font-normal">© First Estate Terms Privacy Cookies Sitemap</h4>
+        </div>
+    </footer>
+    <!-- Ens footer -->
+
+<script src="../assets/js/index.js"></script>
+</body>
+</html>
+
