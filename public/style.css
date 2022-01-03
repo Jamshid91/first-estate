@@ -30324,11 +30324,11 @@ video {
       .carousel-wrapper .prev {
   top: 50%;
   transform: translateY(-50%);
-  width: 40px !important;
-  height: 40px !important;
+  width: 50px !important;
+  height: 50px !important;
 }
 
-.carousel-wrapper .prev img {
+.carousel-wrapper .prev svg {
   transform: rotate(180deg);
 }
 

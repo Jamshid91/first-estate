@@ -4,9 +4,11 @@ let burger = document.querySelector('header .burger');
 let mobileHeader = document.querySelector('.mobile-header-item');
 let mobileHeaderMenu = document.querySelector('.mobile-header-menu');
 let mobileHeaderLang = document.querySelector('.mobile-header-language');
+let next = document.querySelector('.carousel-wrapper .next');
+let prev = document.querySelector('.carousel-wrapper .prev');
 
 openLanguage.addEventListener('click', () => {
-    languageBg.classList.add('openLanguageBg')
+    languageBg.classList.toggle('openLanguageBg')
 });
 
 burger.addEventListener('click', () => {
@@ -63,7 +65,6 @@ class Carouel {
         if(this.responsive) {
             this.responseInit();
         }
-        console.log(this.carousels)
     }
 
      addMyClass() {
@@ -102,30 +103,26 @@ class Carouel {
         this.prev.addEventListener('click', this.prevSlider.bind(this));
     }
 
-    nextSlider() {
-        if(this.options.position < this.carousels.length - this.slidesToShow) {
-        ++this.options.position
-        console.log( ++this.options.position)
-        this.wrap.style.transform = `translateX(-${this.options.position * this.options.widthSlide}%)`;
-        }
-    }
-
 
     nextSlider() {
+        prev.style.display = 'flex'
         if(this.options.infinity || this.options.position < this.options.maxPosition) {
         ++this.options.position
-            if(this.options.position > this.options.maxPosition) {
-                this.options.position = 0
+            if(this.options.position >= this.options.maxPosition) {
+                // this.options.position = 0
+                next.style.display = 'none'
             }
         this.wrap.style.transform = `translateX(-${this.options.position * this.options.widthSlide}%)`;
         }
     }
 
     prevSlider() {
+        next.style.display = 'flex'
         if(this.options.infinity || this.options.position > 0) {
         --this.options.position
-        if(this.options.position < 0) {
-            this.options.position = this.options.maxPosition
+        if(this.options.position <= 0) {
+            // this.options.position = this.options.maxPosition
+            prev.style.display = 'none'
         }
         this.wrap.style.transform = `translateX(-${this.options.position * this.options.widthSlide}%)`;
         }
@@ -216,17 +213,17 @@ function checkInputs() {
 
 
   if(userNameValue === '' || userNameValue.length <= 2) {
-    setErrorFor(userName, "Введите ваше имя")
+    setErrorFor(userName, "Enter your name")
   } else {
     setSuccesFor(userName)
     userName.parentElement.children[1].classList.add('success')
   }
 
   if(userEmailValue === '') {
-    setErrorFor(userEmail, "Введите ваш электронной почты")
+    setErrorFor(userEmail, "Enter your email")
   }
   else if(!isEmail(userEmailValue)) {
-    setErrorFor(userEmail, 'Некорректный эл. почта')
+    setErrorFor(userEmail, 'Invalid email')
   }
   else {
     setSuccesFor(userEmail)
@@ -234,17 +231,17 @@ function checkInputs() {
   }
 
   if(userPhoneValue === '' || userPhoneValue.length < 4) {
-    setErrorFor(userPhone, "Введите ваше номер")
+    setErrorFor(userPhone, "Enter your number")
   } else {
     setSuccesFor(userPhone)
     userPhone.parentElement.children[1].classList.add('success')
   }
   
   if(messageValue === '') {
-    setErrorFor(message, "Оставьте свой отзыв")
+    setErrorFor(message, "Leave your review")
   }
   else if(messageValue.length < 20) {
-    setErrorFor(message, "введите не менее 20 символов")
+    setErrorFor(message, "enter at least 20 characters")
   }
   else {
     setSuccesFor(message)
