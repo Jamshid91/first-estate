@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* width */
+.search-item::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  .search-item::-webkit-scrollbar-track {
+    background: #FDCE4D; 
+    border-radius: 5px;
+  }
+   
+  /* Handle */
+  .search-item::-webkit-scrollbar-thumb {
+    background: #E93842; 
+    border-radius: 5px;
+  }
+
+
     .container {
         max-width: 1280px;
     }

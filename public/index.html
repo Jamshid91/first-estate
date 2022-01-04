@@ -81,18 +81,188 @@
         <img src="../assets/img/png/main.jpg" class="w-full h-full absolute top-0 left-0 z-0 object-cover md:relative md:h-98" alt="">
 
         
-        <div class="main-item absolute bottom-1/4 left-0 p-5 md:bottom-16 sm:bottom-8 md:p-3 z-10 w-1/2 bg-yellow h-auto lg:w-5/6 md:w-full rounded-tr-2xl rounded-br-2xl md:rounded-none">
+        <div class="main-item absolute bottom-1/3 left-0 p-5 md:bottom-16 sm:bottom-8 md:p-3 z-10 w-1/2 bg-yellow h-auto lg:w-5/6 md:w-full rounded-tr-2xl rounded-br-2xl md:rounded-none">
             <h2 class="text-gray_dark text-6xl font-bold font-montserrat md:text-4xl">Best is here</h2>
             <p class= "text-gray_dark text-xl font-montserrat font-medium mt-3">Real estate portal Costa Blanca</p>
-            <form class="main-form search flex items-end justify-between mt-10 md:mt-2 sm:flex-col">
+            <form class="main-form search flex items-end justify-between mt-10 md:mt-2 sm:flex-col relative">
                 <div class="relative  w-3/5 sm:w-full">
                     <svg class="absolute left-4 top-2"  width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="13.2632" cy="13.2632" r="11.7632" stroke="#C4C4C4" stroke-width="3"/>
                         <path d="M21.7895 22.2632L27 27.4737" stroke="#C4C4C4" stroke-width="3"/>
                     </svg>
-                    <input type="text" class="form-search-input pl-16 pr-8 w-full h-12 rounded-3xl outline-none text-lg font-semibold font-montserrat text-gray_dark" placeholder="Ex: Alicante" id="town" maxlength="80" oninput="changeLocation(this)" autocomplete="off">
+                    <input type="text" class="form-search-input pl-16 pr-8 w-full h-12 rounded-3xl outline-none text-lg font-semibold font-montserrat text-gray_dark" placeholder="Ex: Alicante" maxlength="80">
+                    <button class="clear__inp absolute right-4 top-4 hidden" type="button">
+                        <svg width="17" height="17" fill="none">
+                            <circle cx="8.277" cy="8.073" r="8" fill="#8A8BA1"></circle>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.6 4.73a.858.858 0 011.131 0l2.546 2.315 2.546-2.314a.858.858 0 011.13 0 .682.682 0 010 1.028L9.409 8.073l2.546 2.314a.682.682 0 010 1.029.858.858 0 01-1.132 0L8.277 9.102 5.73 11.416a.858.858 0 01-1.131 0 .682.682 0 010-1.029l2.546-2.314L4.6 5.76a.681.681 0 010-1.028z" fill="#fff"></path>
+                        </svg>
+                    </button>
                 </div>
                 <button class="main-form__btn bg-red rounded-3xl w-1/3 h-12 text-lg font-bold text-white font-montserrat sm:w-full sm:mt-2">See catalog</button>
+                <ul class="absolute search-item rounded-xl top-14 w-full z-50 bg-white max-h-64 overflow-y-scroll font-montserrat">
+                    <li class="hidden items-start border-b-2 px-10 cursor-pointer py-3 sm:px-4 border-gray_light hover:bg-gray_light">
+                        <div class="flex">
+                            <img src="../assets/img/png/spain.png" alt="" class="w-16 h-12 sm:w-12 object-cover">
+                            <div class="flex flex-col ml-4">
+                                <span class="font-bold text-lg text-gray_dark search-list">Alicante province</span>
+                                <span class="text-gray-400">Alicante province</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="hidden items-start border-b-2 px-10 cursor-pointer py-3 sm:px-4 border-gray_light hover:bg-gray_light">
+                        <div class="flex">
+                            <img src="../assets/img/png/spain.png" alt="" class="w-16 h-12 sm:w-12 object-cover">
+                            <div class="flex flex-col ml-4">
+                                <span class="font-bold text-lg text-gray_dark search-list">	Cuenca province</span>
+                                <span class="text-gray-400">Cuenca province</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="hidden items-start border-b-2 px-10 cursor-pointer py-3 sm:px-4 border-gray_light hover:bg-gray_light">
+                        <div class="flex">
+                            <img src="../assets/img/png/spain.png" alt="" class="w-16 h-12 sm:w-12 object-cover">
+                            <div class="flex flex-col ml-4">
+                                <span class="font-bold text-lg text-gray_dark search-list">Madrid province</span>
+                                <span class="text-gray-400">Madrid province</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="hidden items-start border-b-2 px-10 cursor-pointer py-3 sm:px-4 border-gray_light hover:bg-gray_light">
+                        <div class="flex">
+                            <img src="../assets/img/png/spain.png" alt="" class="w-16 h-12 sm:w-12 object-cover">
+                            <div class="flex flex-col ml-4">
+                                <span class="font-bold text-lg text-gray_dark search-list">Alava province</span>
+                                <span class="text-gray-400">Alava province</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="hidden items-start border-b-2 px-10 cursor-pointer py-3 sm:px-4 border-gray_light hover:bg-gray_light">
+                        <div class="flex">
+                            <img src="../assets/img/png/spain.png" alt="" class="w-16 h-12 sm:w-12 object-cover">
+                            <div class="flex flex-col ml-4">
+                                <span class="font-bold text-lg text-gray_dark search-list">Teruel province</span>
+                                <span class="text-gray-400">Teruel province</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="hidden items-start border-b-2 px-10 cursor-pointer py-3 sm:px-4 border-gray_light hover:bg-gray_light">
+                        <div class="flex">
+                            <img src="../assets/img/png/spain.png" alt="" class="w-16 h-12 sm:w-12 object-cover">
+                            <div class="flex flex-col ml-4">
+                                <span class="font-bold text-lg text-gray_dark search-list">Albacete province</span>
+                                <span class="text-gray-400">Albacete province</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="hidden items-start border-b-2 px-10 cursor-pointer py-3 sm:px-4 border-gray_light hover:bg-gray_light">
+                        <div class="flex">
+                            <img src="../assets/img/png/spain.png" alt="" class="w-16 h-12 sm:w-12 object-cover">
+                            <div class="flex flex-col ml-4">
+                                <span class="font-bold text-lg text-gray_dark search-list">Almeria province</span>
+                                <span class="text-gray-400">Almeria province</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="hidden items-start border-b-2 px-10 cursor-pointer py-3 sm:px-4 border-gray_light hover:bg-gray_light">
+                        <div class="flex">
+                            <img src="../assets/img/png/spain.png" alt="" class="w-16 h-12 sm:w-12 object-cover">
+                            <div class="flex flex-col ml-4">
+                                <span class="font-bold text-lg text-gray_dark search-list">Asturias province</span>
+                                <span class="text-gray-400">Asturias province</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="hidden items-start border-b-2 px-10 cursor-pointer py-3 sm:px-4 border-gray_light hover:bg-gray_light">
+                        <div class="flex">
+                            <img src="../assets/img/png/spain.png" alt="" class="w-16 h-12 sm:w-12 object-cover">
+                            <div class="flex flex-col ml-4">
+                                <span class="font-bold text-lg text-gray_dark search-list">Badajoz province</span>
+                                <span class="text-gray-400">Badajoz province</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="hidden items-start border-b-2 px-10 cursor-pointer py-3 sm:px-4 border-gray_light hover:bg-gray_light">
+                        <div class="flex">
+                            <img src="../assets/img/png/spain.png" alt="" class="w-16 h-12 sm:w-12 object-cover">
+                            <div class="flex flex-col ml-4">
+                                <span class="font-bold text-lg text-gray_dark search-list">Balearic Islands region</span>
+                                <span class="text-gray-400">Spain</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="hidden items-start border-b-2 px-10 cursor-pointer py-3 sm:px-4 border-gray_light hover:bg-gray_light">
+                        <div class="flex">
+                            <img src="../assets/img/png/spain.png" alt="" class="w-16 h-12 sm:w-12 object-cover">
+                            <div class="flex flex-col ml-4">
+                                <span class="font-bold text-lg text-gray_dark search-list">Barcelona province</span>
+                                <span class="text-gray-400">Barcelona province</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="hidden items-start border-b-2 px-10 cursor-pointer py-3 sm:px-4 border-gray_light hover:bg-gray_light">
+                        <div class="flex">
+                            <img src="../assets/img/png/spain.png" alt="" class="w-16 h-12 sm:w-12 object-cover">
+                            <div class="flex flex-col ml-4">
+                                <span class="font-bold text-lg text-gray_dark search-list">Burgos province</span>
+                                <span class="text-gray-400">Burgos province</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="hidden items-start border-b-2 px-10 cursor-pointer py-3 sm:px-4 border-gray_light hover:bg-gray_light">
+                        <div class="flex">
+                            <img src="../assets/img/png/spain.png" alt="" class="w-16 h-12 sm:w-12 object-cover">
+                            <div class="flex flex-col ml-4">
+                                <span class="font-bold text-lg text-gray_dark search-list">Caceres province</span>
+                                <span class="text-gray-400">Caceres province</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="hidden items-start border-b-2 px-10 cursor-pointer py-3 sm:px-4 border-gray_light hover:bg-gray_light">
+                        <div class="flex">
+                            <img src="../assets/img/png/spain.png" alt="" class="w-16 h-12 sm:w-12 object-cover">
+                            <div class="flex flex-col ml-4">
+                                <span class="font-bold text-lg text-gray_dark search-list">Cadiz province</span>
+                                <span class="text-gray-400">Cadiz province</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="hidden items-start border-b-2 px-10 cursor-pointer py-3 sm:px-4 border-gray_light hover:bg-gray_light">
+                        <div class="flex">
+                            <img src="../assets/img/png/spain.png" alt="" class="w-16 h-12 sm:w-12 object-cover">
+                            <div class="flex flex-col ml-4">
+                                <span class="font-bold text-lg text-gray_dark search-list">Cantabria province</span>
+                                <span class="text-gray-400">Cantabria region</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="hidden items-start border-b-2 px-10 cursor-pointer py-3 sm:px-4 border-gray_light hover:bg-gray_light">
+                        <div class="flex">
+                            <img src="../assets/img/png/spain.png" alt="" class="w-16 h-12 sm:w-12 object-cover">
+                            <div class="flex flex-col ml-4">
+                                <span class="font-bold text-lg text-gray_dark search-list">Castellon province</span>
+                                <span class="text-gray-400">Valencia region</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="hidden items-start border-b-2 px-10 cursor-pointer py-3 sm:px-4 border-gray_light hover:bg-gray_light">
+                        <div class="flex">
+                            <img src="../assets/img/png/spain.png" alt="" class="w-16 h-12 sm:w-12 object-cover">
+                            <div class="flex flex-col ml-4">
+                                <span class="font-bold text-lg text-gray_dark search-list">Ciudad Real province</span>
+                                <span class="text-gray-400">Castillia La Mancha region</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="hidden items-start border-b-2 px-10 cursor-pointer py-3 sm:px-4 border-gray_light hover:bg-gray_light">
+                        <div class="flex">
+                            <img src="../assets/img/png/spain.png" alt="" class="w-16 h-12 sm:w-12 object-cover">
+                            <div class="flex flex-col ml-4">
+                                <span class="font-bold text-lg text-gray_dark search-list">Cordoba province</span>
+                                <span class="text-gray-400">Córdoba province</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </form>
         </div>
 

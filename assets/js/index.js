@@ -27,6 +27,71 @@ mobileHeaderMenu.addEventListener('click', () => {
 });
 // End menu mobile
 
+// Start Filter search
+
+    let searchInp = document.querySelector('.form-search-input');
+    let clickedLists = document.querySelectorAll('.search-item li');
+
+    clickedLists.forEach(click => {
+        
+    })
+
+    searchInp.addEventListener('input', () => {
+        let val = searchInp.value.trim();
+        let searchLists = document.querySelectorAll('.search .search-list');
+        let clearInp = document.querySelector('.clear__inp');
+
+        clearInp.classList.remove('hidden')
+        if(val != '') {
+            searchLists.forEach(elem => {
+                let elemPar = elem.parentElement.parentElement.parentElement
+
+                if(elem.textContent.search(val) == -1) {
+                    elemPar.classList.add('hidden');
+                    elem.innerHTML = elem.innerText;
+                } else {
+                    elemPar.classList.remove('hidden');
+                    let str = elem.innerText;
+                    elem.innerHTML = insertMark(str, elem.textContent.search(val), val.length)
+                }
+
+                if(val != elem.innerText) {
+                    console.log('NO')
+                }
+
+                elemPar.addEventListener('click', () => {
+                    searchInp.value = elem.innerText;
+                    searchLists.forEach(elem1 => {
+                        let elemPar1 = elem1.parentElement.parentElement.parentElement
+                        elemPar1.classList.add('hidden');
+                    })
+                })
+            });
+        } else {
+            searchLists.forEach(elem => {
+                let elemPar = elem.parentElement.parentElement.parentElement
+                elemPar.classList.add('hidden');
+                elem.innerHTML = elem.innerText;
+            })
+        }
+
+        clearInp.addEventListener('click', () => {
+            searchLists.forEach(elem => {
+                let elemPar = elem.parentElement.parentElement.parentElement
+                elemPar.classList.add('hidden');
+            })
+            searchInp.value = ''
+            clearInp.classList.add('hidden')
+        })
+    });
+
+    function insertMark(string,pos,len) {
+        return string.slice(0, pos) + '<mark>' + string.slice(pos, pos + len) + '</mark>' + string.slice(pos + len)
+    } 
+
+// End Filter search
+
+
 // Start Carouel
 class Carouel {
     constructor({
@@ -65,6 +130,7 @@ class Carouel {
         if(this.responsive) {
             this.responseInit();
         }
+        console.log(this.carousels)
     }
 
      addMyClass() {
@@ -108,10 +174,10 @@ class Carouel {
         prev.style.display = 'flex'
         if(this.options.infinity || this.options.position < this.options.maxPosition) {
         ++this.options.position
-            if(this.options.position >= this.options.maxPosition) {
-                // this.options.position = 0
-                next.style.display = 'none'
-            }
+        if(this.options.position >= this.options.maxPosition) {
+            // this.options.position = 0
+            next.style.display = 'none'
+        }
         this.wrap.style.transform = `translateX(-${this.options.position * this.options.widthSlide}%)`;
         }
     }
